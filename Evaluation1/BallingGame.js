@@ -13,9 +13,13 @@ const CalculateScore=(frames)=>{
         let nxtFrame=(!frames[i+1])?0:frames[i+1];
         let nxtToNxtFrame=(!frames[i+2])?0:frames[i+2];
        // console.log(frames[i]+nxtFrame+nxtToNxtFrame,score);
-
+        if(frames[i+1]===undefined || frames[i+2]===undefined)
+        {
+            i+=1;
+            continue;
+        }
         score+=frames[i]+nxtFrame+nxtToNxtFrame;
-        i+=3;
+        i+=1;
         }
         else if(currFrame===10){
             let nxtBall=(!frames[i+2])?0:frames[i+2];
@@ -32,5 +36,15 @@ const CalculateScore=(frames)=>{
     }
     return score;
 }
-console.log(CalculateScore([10,0,0,5,5,2,3]));
+
+const getBestGame=(games)=>{
+    let best=0;
+    games.forEach(game => {
+        //console.log(game);
+        best=(CalculateScore(game)>best)?CalculateScore(game):best;
+    });
+    return best;
+}
+console.log(getBestGame([[10,5,5,2,3],[10,5,5,10,10,3]]));
+console.log(CalculateScore([10,5,5,10,10,3]));
 module.exports={CalculateScore}
