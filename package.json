@@ -1,0 +1,22 @@
+{
+  "name": "evalutions",
+  "version": "1.0.0",
+  "description": "Evaluation repository",
+  "main": "BallingGame.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Promit-revar/Evalutions.git"
+  },
+  "author": "Promit Revar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Promit-revar/Evalutions/issues"
+  },
+  "homepage": "https://github.com/Promit-revar/Evalutions#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
