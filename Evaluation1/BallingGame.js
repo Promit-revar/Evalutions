@@ -47,4 +47,4 @@ const getBestGame=(games)=>{
 }
 console.log(getBestGame([[10,5,5,2,3],[10,5,5,10,10,3]]));
 console.log(CalculateScore([10,5,5,10,10,3]));
-module.exports={CalculateScore}
+module.exports={CalculateScore,getBestGame}
