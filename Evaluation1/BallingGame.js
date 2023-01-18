@@ -15,8 +15,7 @@ const CalculateScore=(frames)=>{
        // console.log(frames[i]+nxtFrame+nxtToNxtFrame,score);
         if(frames[i+1]===undefined || frames[i+2]===undefined)
         {
-            i+=1;
-            continue;
+            break;
         }
         score+=frames[i]+nxtFrame+nxtToNxtFrame;
         i+=1;
