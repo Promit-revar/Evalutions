@@ -42,6 +42,5 @@ const getBestGame = (games) => {
     });
     return best;
 }
-// console.log(getBestGame([[10, 5, 5, 2, 3], [10, 5, 5, 10, 10, 3]]));
-// console.log(calculateScore([10, 5, 5, 10, 10, 3]));
+
 module.exports = { calculateScore, getBestGame }
